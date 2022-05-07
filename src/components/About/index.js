@@ -1,10 +1,10 @@
 import React from 'react';
-import coverImage from '../../assets/images/selfphoto.jpg';
+// import coverImage from '../../assets/images/selfphoto.jpg';
 function About() {
   return (
     <section className="my-5">
       <h1 id="about">Meet Leah</h1>
-      <img src={coverImage} className="my-2" style={{ width: "100%" }} alt="cover" />
+      {/* <img src={coverImage} className="my-2" style={{ width: "40%" }} alt="cover" /> */}
       <div className="my-2">
         <p>
         Leah Fox is currently a student at a local community college.

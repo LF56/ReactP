@@ -1,7 +1,7 @@
 import React from "react";
 import { capitalizeFirstLetter } from "../../utils/helpers";
 
-function Header() {
+function Nav() {
   const  categories = [
     { name: 'commercial', description: 'Photos of grocery stores, food trucks, and other commercial projects' },
     { name: 'portraits', description: 'Portraits of people in my life' },
@@ -44,4 +44,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default Nav;
