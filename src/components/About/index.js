@@ -2,12 +2,12 @@ import React from 'react';
 import coverImage from '../../assets/images/selfphoto.jpg';
 function About() {
   return (
-    <section className="grid-x grid-padding-x align-center-middle text-center">
+    <section className="grid-x grid-padding-x align-center-middle text-center ">
       {/* <h1 id="about">Meet Leah</h1> */}
    
         <img src={coverImage} className="card cell small-4" style={{ width: "40%" }} alt="cover" />
     
-      <div className="card cell small-4 ">
+      <div className="card cell small-4 position-absolute">
         <p>
           Leah Fox is currently a student at a local community college.
           While pursuing an Associate in Art degree, Leah has found her creative passion, and wants to make a
