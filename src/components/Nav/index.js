@@ -15,11 +15,17 @@ function Nav(props) {
   }, [currentCategory]);
 
   return (
-    <header className="flex-row px-1">
-      <h2>
-      </h2>
+    <h3 className="flex-row px-1">
       <nav>
-        <ul className="flex-row">
+        <ul className="menu simple align-center">
+          {/* <li className="mx-2">
+            <a data-testid="about" href="#about" onClick={() => setContactSelected(false)}>
+              About me
+            </a>
+          </li> */}
+          <li className={`mx-2 ${contactSelected && 'navActive'}`}>
+            <span onClick={() => setContactSelected(true)}>Contact Me</span>
+          </li>
           {categories.map((category) => (
             <li
               className={`mx-1 ${
@@ -27,19 +33,19 @@ function Nav(props) {
                 }`}
               key={category.name}
             >
-              <a href= {`#${category.name}`}
+              <span
                 onClick={() => {
                   setCurrentCategory(category);
                   setContactSelected(false);
                 }}
               >
                 {capitalizeFirstLetter(category.name)}
-              </a>
+              </span>
             </li>
           ))}
         </ul>
       </nav>
-    </header>
+    </h3>
   );
 }
 
