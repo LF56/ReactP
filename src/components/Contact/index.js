@@ -41,10 +41,10 @@ function ContactForm() {
       <h1 data-testid="h1tag" className='text-center'>Get In Touch!</h1>
      
       <form id="contact-form" onSubmit={handleSubmit}>
-        <div class="grid-container" >
-          <div class="grid-x grid-padding-x position-center align-center">
+        <div className="grid-container" >
+          <div className="grid-x grid-padding-x position-center align-center">
             
-            <div class="medium-6 cell">
+            <div className="medium-6 cell">
               <label htmlFor="name">Name:</label>
               <input type="text" name="name" defaultValue={name} onBlur={handleChange} />
               <label htmlFor="email">Email address:</label>
@@ -56,7 +56,7 @@ function ContactForm() {
                   <p className="error-text">{errorMessage}</p>
                 </div>
               )}
-              <button class="submit button" type="submit">Submit</button>
+              <button className="submit button" type="submit">Submit</button>
 
             </div>
           </div>

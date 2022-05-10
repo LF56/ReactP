@@ -3,6 +3,7 @@ import About from './components/About';
 import Nav from './components/Nav';
 import ContactForm from './components/Contact';
 import ProjectList from './components/ProjectList';
+import Resume from './components/Resume';
 
 
 
@@ -11,7 +12,7 @@ function App() {
     { name: 'projects'},
     { name: 'resume'},
   ]);
-  const [currentCategory, setCurrentCategory] = useState(categories[0]);
+  const [currentCategory, setCurrentCategory] = useState('about');
   const [contactSelected, setContactSelected] = useState(false);
   const [aboutSelected, setAboutSelected] = useState(true);
 
@@ -36,6 +37,7 @@ function App() {
           <About></About>
         ): (
           <ContactForm contactSelected={contactSelected}></ContactForm>
+
 
         )}
       </main>

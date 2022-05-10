@@ -1,7 +1,8 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { capitalizeFirstLetter } from '../../utils/helpers';
 
 function Nav(props) {
+  document.title = 'Leah Fox'
   const {
     categories = [],
     setCurrentCategory,
@@ -12,8 +13,14 @@ function Nav(props) {
     setAboutSelected
   } = props;
 
-  useEffect(() => {
-    document.title = capitalizeFirstLetter(setCurrentCategory.name); }, [setCurrentCategory]);
+//   useEffect(() => {
+//     document.title = capitalizeFirstLetter(setCurrentCategory.name);
+//   if(contactSelected){
+//     setCurrentCategory('contact');
+// } else if (aboutSelected) {
+//   setCurrentCategory('about');
+// }
+//   }, [setCurrentCategory]);
 
   return (
     <h3 className="flex-row px-1">
