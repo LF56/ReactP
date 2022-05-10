@@ -2,16 +2,18 @@ import React, { useState } from 'react';
 import About from './components/About';
 import Nav from './components/Nav';
 import ContactForm from './components/Contact';
+import ProjectList from './components/ProjectList';
+
 
 
 function App() {
   const [categories] = useState([
-    { name: 'about Me'},
     { name: 'projects'},
     { name: 'resume'},
   ]);
   const [currentCategory, setCurrentCategory] = useState(categories[0]);
   const [contactSelected, setContactSelected] = useState(false);
+  const [aboutSelected, setAboutSelected] = useState(true);
 
   return (
     <div>
@@ -21,15 +23,20 @@ function App() {
     currentCategory={currentCategory}
     contactSelected={contactSelected}
     setContactSelected={setContactSelected}
+    aboutSelected={aboutSelected}
+    setAboutSelected= {setAboutSelected}
     />
-      <main>
-        {!contactSelected ? (
+    
+    <main>
+        {!contactSelected && !aboutSelected ? (
           <>
-            {/* <Gallery currentCategory={currentCategory}></Gallery> */}
-            <About></About>
+            <ProjectList currentCategory={currentCategory}></ProjectList>
           </>
-        ) : (
-          <ContactForm></ContactForm>
+        ) : aboutSelected && !contactSelected ? (
+          <About></About>
+        ): (
+          <ContactForm contactSelected={contactSelected}></ContactForm>
+
         )}
       </main>
     </div>

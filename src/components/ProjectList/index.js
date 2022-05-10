@@ -1,128 +1,63 @@
 import React, { useState } from 'react';
-import Modal from '../Modal';
 
-const PhotoList = ({ category }) => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [currentPhoto, setCurrentPhoto] = useState();
-
-  const [photos] = useState([
+const ProjectList = ({ category }) => {
+  const [projects] = useState([
     {
-      name: 'Grocery aisle',
-      category: 'commercial',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie'
-    },
-    {
-      name: 'Grocery booth',
-      category: 'commercial',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie'
-    },
-    {
-      name: 'Building exterior',
-      category: 'commercial',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie'
-    },
-    {
-      name: 'Restaurant table',
-      category: 'commercial',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie'
-    },
-    {
-      name: 'Cafe interior',
-      category: 'commercial',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie'
-    },
-    {
-      name: 'Cat green eyes',
-      category: 'portraits',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie'
-    },
-    {
-      name: 'Green parrot',
-      category: 'portraits',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie'
-    },
-    {
-      name: 'Yellow macaw',
-      category: 'portraits',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie'
-    },
-    {
-      name: 'Pug smile',
-      category: 'portraits',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie'
-    },
-    {
-      name: 'Pancakes',
-      category: 'food',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie'
-    },
-    {
-      name: 'Burrito',
-      category: 'food',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie'
-    },
-    {
-      name: 'Scallop pasta',
-      category: 'food',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie'
-    },
-    {
-      name: 'Burger',
-      category: 'food',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie'
-    },
-    {
-      name: 'Fruit bowl',
-      category: 'food',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie'
-    },
-    {
-      name: 'Green river',
-      category: 'landscape',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie'
-    },
+                name: 'RunBuddy',
+                github: 'https://github.com/LF56/RunBuddy',
+                deployed: 'https://lf56.github.io/RunBuddy/',
+                description: ''
+            },
+            {
+                name: 'WorkDay Scheduler',
+                github: 'https://github.com/LF56/WorkScheduler',
+                deployed: 'https://lf56.github.io/WorkScheduler/',
+                description: ''
+            },
+            {
+                name: 'Note-Taker',
+                github: 'https://github.com/LF56/NoteTaker-Application',
+                deployed: 'https://notetaker-challenge.herokuapp.com/notes',
+                description: ''
+            },
+            {
+                name: 'TechBlog',
+                github: 'https://github.com/LF56/TechBlog',
+                deployed: 'https://spotblogfox.herokuapp.com/',
+                description: ''
+            },
+            {
+                name: 'goRecette',
+                github: 'https://github.com/LF56/goRecette',
+                deployed: 'https://lf56.github.io/goRecette/',
+                description: ''
+            },
+            {
+                name: 'SafeSpot',
+                github: 'https://github.com/LF56/SafeSpot',
+                deployed: 'https://safespotblog.herokuapp.com/dashboard/',
+                description: ''
+            },
   ]);
 
-  const currentPhotos = photos.filter(photo => photo.category === category);
-
-  const toggleModal = (image, i) => {
-    setCurrentPhoto({ ...image, index: i });
-    setIsModalOpen(!isModalOpen);
-  };
+  const currentPhotos = projects.filter(photo => photo.category === category);
 
   return (
     <div>
-      {isModalOpen && (
-        <Modal onClose={toggleModal} currentPhoto={currentPhoto} />
-      )}
       <div className="flex-row">
         {currentPhotos.map((image, i) => (
           <img
-            src={require(`../../assets/small/${category}/${i}.jpg`).default}
+            src={require(`../../assets/images/${i+1}.png`)}
             alt={image.name}
-            className="img-thumbnail mx-1"
-            onClick={() => toggleModal(image, i)}
+            className=""
             key={image.name}
           />
         ))}
       </div>
     </div>
+
+    
   );
 };
 
-export default PhotoList;
+export default ProjectList;
