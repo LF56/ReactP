@@ -43,22 +43,18 @@ const ProjectList = ({ category }) => {
   const currentPhotos = projects.filter(photo => photo.category === category);
 
   return (
-  
-      <div className="grid-x grid-padding-x">
-        <div className="cell small-4">
-          {currentPhotos.map((image, i) => (
-            <img
-              src={require(`../../assets/images/${i + 1}.png`)}
-              alt={image.name}
-              className="card" 
-              key={image.name}
-            />
-          ))}
+      <div class="grid-container">
+        <div class="grid-x">
+          <div class="cell">
+            <div class="card">
+              {currentPhotos.map((image, i) => (
+                <img src={require(`../../assets/images/${i + 1}.png`)} alt={image.name} className="card" key={image.name} />))}
+              <div class="card-section">
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-
-      
-
   );
 };
 

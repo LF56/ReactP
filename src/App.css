@@ -2,6 +2,15 @@
   text-align: center;
 }
 
+.experience__container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+.experience__container> div {
+  background-color: aqua;
+  padding:  2.4rem 5rem;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
