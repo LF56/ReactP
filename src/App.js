@@ -3,7 +3,7 @@ import About from './components/About';
 import Nav from './components/Nav';
 import ContactForm from './components/Contact';
 import ProjectList from './components/ProjectList';
-import Resume from './components/Resume';
+import Footer from './components/Footer';
 
 
 
@@ -26,6 +26,8 @@ function App() {
     setContactSelected={setContactSelected}
     aboutSelected={aboutSelected}
     setAboutSelected= {setAboutSelected}
+    // resumeSelected= {resumeSelected}
+    // setResumeSelected = {resumeSelected}
     />
     
     <main>
@@ -37,10 +39,9 @@ function App() {
           <About></About>
         ): (
           <ContactForm contactSelected={contactSelected}></ContactForm>
-
-
         )}
       </main>
+      <Footer></Footer>
     </div>
   );
 }

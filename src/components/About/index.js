@@ -1,6 +1,5 @@
 import React from 'react';
 import coverImage from '../../assets/images/selfphoto.jpg';
-import { MdLibraryAddCheck } from 'react-icons/md';
 function About() {
   return (
 
