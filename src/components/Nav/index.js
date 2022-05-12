@@ -1,46 +1,41 @@
-import React from "react";
-import { capitalizeFirstLetter } from "../../utils/helpers";
+import React from 'react';
+import { capitalizeFirstLetter } from '../../utils/helpers';
 
-function Nav() {
-  const  categories = [
-    { name: 'commercial', description: 'Photos of grocery stores, food trucks, and other commercial projects' },
-    { name: 'portraits', description: 'Portraits of people in my life' },
-    { name: 'food', description: 'Delicious delicacies' },
-    { name: 'landscape', description: 'Fields, farmhouses, waterfalls, and the beauty of nature' }
-  ];
-
-  const handleClick = () => {
-    console.log("click handled")
-  }
+function Nav(props) {
+  document.title = 'Leah Fox'
+  const {
+    
+    setCurrentCategory,
+    contactSelected,
+    currentCategory,
+    setContactSelected,
+    aboutSelected,
+    setAboutSelected,
+    resumeSelected,
+    setResumeSelected
+  } = props;
 
   return (
-    <header data-testid="header" className="flex-row px-1">
-      <h2>
-      </h2>
+    <h3 className="flex-row px-1">
       <nav>
-        <ul className="flex-row">
-          <li className="mx-2">
-            <a href="#about" onClick={() => handleClick()}>
-              About me
-            </a>
+        <ul className="menu simple align-center">
+        <li className={`mx-2 ${aboutSelected}`}>
+            <span onClick={() => {setContactSelected(false); setAboutSelected(true); setCurrentCategory('about') }}>About Me</span>
           </li>
-          <li className={"mx-2"}>
-            <span onClick={() => handleClick()}>
-              Contact
-            </span>
+
+          <li className={`mx-2 ${contactSelected}`}>
+            <span onClick={() => {setContactSelected(true); setAboutSelected(false); setCurrentCategory('contact')}}>Contact Me</span>
           </li>
-          {
-            categories.map((category) => (
-              <li className="mx-1" key={category.name} >
-                <span onClick={() => { handleClick(); }}>
-                 {capitalizeFirstLetter(category.name)}
-                </span>
-              </li>
-            ))
-          }
+          <li className={`mx-2 ${currentCategory}`}>
+            <span onClick={() => {setContactSelected(false); setAboutSelected(false); setCurrentCategory('projects')}}>Projects</span>
+          </li>
+          <li className={`mx-2 ${resumeSelected}`}>
+            <span onClick={() => {setContactSelected(false); setResumeSelected(false); setCurrentCategory('resume')}}>Resume</span>
+          </li>
+
         </ul>
       </nav>
-    </header>
+    </h3>
   );
 }
 

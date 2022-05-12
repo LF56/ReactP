@@ -1,24 +1,30 @@
 import React from 'react';
-// import coverImage from '../../assets/images/selfphoto.jpg';
+import coverImage from '../../assets/images/selfphoto.jpg';
 function About() {
   return (
-    <section className="my-5">
-      <h1 id="about">Meet Leah</h1>
-      {/* <img src={coverImage} className="my-2" style={{ width: "40%" }} alt="cover" /> */}
-      <div className="my-2">
-        <p>
-        Leah Fox is currently a student at a local community college.
-        While pursuing an Associate in Art degree, Leah has found her creative passion, and wants to make a
-        career change because of that.
-        She has a background in retail and customer service, but is looking to make a career out of her true
-        passion, which is creating in any way she can.
-        Through many trials, Leah stays determined on her long term goals.
-        Below are some of the current projects she has completed through the University of Central Florida
-        FullStack Bootcamp. Click the photo for access to the completed webpage. To follow up with Leah,
-        please follow the links below.
-        </p>
+
+    <div className="a">
+    <div className="a-left">
+      <div className="a-card bg"></div>
+      <div className="a-card">
+    <img src={coverImage}  alt="cover" />
+
       </div>
-    </section>
+    </div>
+    <div className="a-right">
+      <h1 className="a-title">About Me</h1>
+      <p className="a-sub">
+        So Who is Leah Fox?
+      </p>
+      <p className="a-desc">
+      Currently a student at Seminole State College finishing up my degree, along with taking a Full Stack Coding Course through the University of Central Florida. I have worked previously 5 years in retail and decided it was time to make a future for myself, so I turned to coding.
+I enjoy being creative and trying new things and coding has given me an outlet to explore just that. Through all the trials and roadblocks, I remain determined and persistent on the end goal.
+Outside coding and school, I love to bake, plan parties and watch sports. Connect with me!
+
+      </p>
+  
+    </div>
+  </div>
   );
 }
 
