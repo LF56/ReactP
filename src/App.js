@@ -36,7 +36,7 @@ function App() {
       <main>
         {!contactSelected && !aboutSelected ? (
           <>
-            <ProjectList
+            <ProjectList className="grid-container"
               currentCategory={currentCategory}>
             </ProjectList>
           </>

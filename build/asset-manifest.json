@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/ReactP/static/css/main.fcbdfbf8.css",
+    "main.js": "/ReactP/static/js/main.293620db.js",
+    "static/media/selfphoto.jpg": "/ReactP/static/media/selfphoto.beff918a772085f5fe95.jpg",
+    "static/media/5.png": "/ReactP/static/media/5.098a7e15624f23428926.png",
+    "static/media/1.png": "/ReactP/static/media/1.6ba026275729dcb68098.png",
+    "static/media/6.png": "/ReactP/static/media/6.f27f6f48ff02d30ffe23.png",
+    "static/media/4.png": "/ReactP/static/media/4.1acab15ae16194c5da84.png",
+    "static/media/2.png": "/ReactP/static/media/2.df412dec40edc9c53311.png",
+    "static/media/Resume.pdf": "/ReactP/static/media/Resume.402c2b71f397c926d413.pdf",
+    "static/media/3.png": "/ReactP/static/media/3.8954dd21a9b9dd9c36f9.png",
+    "index.html": "/ReactP/index.html",
+    "main.fcbdfbf8.css.map": "/ReactP/static/css/main.fcbdfbf8.css.map",
+    "main.293620db.js.map": "/ReactP/static/js/main.293620db.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fcbdfbf8.css",
+    "static/js/main.293620db.js"
+  ]
+}
