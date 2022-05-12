@@ -55,11 +55,12 @@ const ProjectList = ({ category }) => {
             <div className="card" id="img-card">
               <img src={require(`../../assets/images/${i + 1}.png`)} alt={image.name} className="imgage-card" key={image.name} />
               <div className="card-section">
-            <p className="hover">{image.github}</p>
-            <p className="hover">{image.deployed}</p>
+            <a className="hover" href={image.github}>{image.github}</a>
+            <a className="hover" href={image.deployed}>{image.deployed}</a>
               </div>
             </div>
             <div className="middle">
+              {image.description}
             </div>
       </div>))}
     </div>

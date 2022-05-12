@@ -61,7 +61,10 @@ html, body {
 .middle{
   transition: .5s ease;
   opacity: 0;
+  padding: 20px 20px;
+  background-color: #e29578;
   position: fixed;
+font-size:large;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -76,10 +79,11 @@ html, body {
 }
 .hover{
   background-color: #e29578;
-  color: white;
+  color: black;
   font-size: 16px;
   padding: 30px 25px;
-}
+  white-space:nowrap;
+contain: content;}
 
 
 .button {
@@ -340,5 +344,18 @@ code {
 .overlay-fade-in:hover .button {
   transition-delay: 0.2s; }
 
+/* Small only */
+@media screen and (max-width: 39.9375em) {}
 
+/* Medium and up */
+@media screen and (min-width: 40em) {}
+
+/* Medium only */
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {}
+
+/* Large and up */
+@media screen and (min-width: 64em) {}
+
+/* Large only */
+@media screen and (min-width: 64em) and (max-width: 74.9375em) {}
 
