@@ -11,8 +11,7 @@ function Nav(props) {
     setContactSelected,
     aboutSelected,
     setAboutSelected,
-    resumeSelected,
-    setResumeSelected
+  
   } = props;
 
   return (
@@ -29,10 +28,6 @@ function Nav(props) {
           <li className={`mx-2 ${currentCategory}`}>
             <span onClick={() => {setContactSelected(false); setAboutSelected(false); setCurrentCategory('projects')}}>Projects</span>
           </li>
-          <li className={`mx-2 ${resumeSelected}`}>
-            <span onClick={() => {setContactSelected(false); setResumeSelected(false); setCurrentCategory('resume')}}>Resume</span>
-          </li>
-
         </ul>
       </nav>
     </h3>
