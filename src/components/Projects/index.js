@@ -1,4 +1,5 @@
 import React from 'react';
+import Resume from '../Resume';
 import ProjectList from '../ProjectList';
 
 function Projects() {
@@ -7,6 +8,7 @@ function Projects() {
             <ProjectList>
                 
             </ProjectList>
+            <Resume></Resume>
         </section>
     )
 }

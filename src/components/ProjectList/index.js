@@ -47,25 +47,20 @@ const ProjectList = ({ category }) => {
   ]);
 
   const image = projects.filter(photo => photo.category === category);
-  
+
   return (
     <div className='row align-center'>
-     
-      <div class="grid-container">
-          <div class="small">
+      <div className="grid-container">
           {image.map((image, i) => (
-                <img src={require(`../../assets/images/${i + 1}.png`)} alt={image.name} className="card"  key={image.name} />))}
-            <div class="card">  
-              <div class="card-section">
-                {projects.name}
+            <div className="card">
+              <img src={require(`../../assets/images/${i + 1}.png`)} alt={image.name} className="card" key={image.name} />
+              <div className="card-section">
+                <p>{projects.github}</p>
               </div>
-            </div>
-          </div>
-        </div>
-        </div>
-       
-  
-      
+            </div> ))}
+      </div>
+    </div>
+
   );
 };
 
