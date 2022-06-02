@@ -3,11 +3,11 @@ import React, { useState } from 'react';
 const ProjectList = ({ category }) => {
   const [projects, setProject] = useState([
     {
-      name: 'RunBuddy',
-      image: 'runbuddy',
-      github: 'https://github.com/LF56/RunBuddy',
-      deployed: 'https://lf56.github.io/RunBuddy/',
-      description:'This application is the beginning of our learning. We focused on learning HTML and CSS. The purpose of this application was for runners to get matched to a trainer to optimize their workouts.'    
+      name: 'BookSpace',
+      image: 'BookSpace',
+      github: 'https://github.com/LF56/BookSpace',
+      deployed: 'https://book-space-app.herokuapp.com/',
+      description: 'A book search application designed for avid readers. This is a react based application. This will allow users to search and save books they want to read.'    
     },
     {
       name: 'WorkDay Scheduler',
